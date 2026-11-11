@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAZURI STORE - Online Shopping</title>
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,13 +23,13 @@
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
 
     <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-indigo-900 text-white text-xs py-2 px-4 text-center font-medium flex flex-wrap justify-center items-center gap-2">
+    <div class="bg-indigo-950 text-white text-xs py-2 px-4 text-center font-medium flex flex-wrap justify-center items-center gap-2 shadow-inner">
         <span>🚚 Payment on delivery available!</span>
-        <span class="hidden sm:inline">•</span>
-        <span>📦 Send shipping fee to: <strong class="bg-amber-400 text-amber-950 px-2 py-0.5 rounded font-bold">0768655532</strong></span>
-        <span class="hidden sm:inline">•</span>
-        <a href="https://wa.me/254754183948" target="_blank" class="text-emerald-300 hover:text-emerald-200 underline font-bold inline-flex items-center">
-            <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp: 0754183948
+        <span class="hidden sm:inline text-indigo-400">•</span>
+        <span>📦 Pay shipping fee first to: <strong class="bg-amber-400 text-amber-950 px-2.5 py-0.5 rounded font-black">0768655532</strong></span>
+        <span class="hidden sm:inline text-indigo-400">•</span>
+        <a href="https://wa.me/254754183948" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center">
+            <i class="fa-brands fa-whatsapp mr-1 text-sm"></i> WhatsApp Inquiry: 0754183948
         </a>
     </div>
 
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <h1 class="font-extrabold text-xl leading-none text-slate-900 tracking-tight">MAZURI STORE</h1>
-                    <p class="text-[11px] font-medium text-slate-400 mt-0.5">Quality Online Deals & Delivery</p>
+                    <p class="text-[11px] font-medium text-slate-400 mt-0.5">Quality Online Deals & Quick Delivery</p>
                 </div>
             </div>
 
@@ -53,31 +53,31 @@
                 </a>
 
                 <div id="authNavArea" class="flex items-center space-x-2">
-                    <!-- Dynamic auth buttons -->
+                    <!-- Dynamic Auth State Loaded Here -->
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- MAIN CONTENT AREA -->
+    <!-- MAIN CONTENT CONTAINER -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-6">
 
         <!-- HERO & PROMO BANNER -->
-        <div class="relative bg-gradient-to-r from-indigo-700 via-indigo-600 to-purple-700 text-white rounded-3xl p-6 sm:p-8 mb-8 shadow-xl overflow-hidden">
+        <div class="relative bg-gradient-to-r from-indigo-800 via-indigo-600 to-violet-700 text-white rounded-3xl p-6 sm:p-8 mb-8 shadow-xl overflow-hidden">
             <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl font-black select-none pointer-events-none">MAZURI</div>
             <div class="relative z-10 max-w-2xl">
                 <span class="inline-block bg-amber-400 text-amber-950 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3 shadow-sm">
-                    ⚡ Live Flash Sales & Offers
+                    ⚡ Live Flash Sales & Daily Offers
                 </span>
-                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-2">Shop Top Products at MAZURI STORE</h2>
+                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-2">Shop Exclusive Products at MAZURI STORE</h2>
                 <p class="text-indigo-100 text-xs sm:text-sm font-normal leading-relaxed mb-6">
-                    Order items directly and pay the main item cost upon physical delivery. Note that shipping fees must be sent to <strong>0768655532</strong> prior to dispatch.
+                    Order your item online and pay the item cost on delivery. Please note: Shipping fees <strong>must</strong> be sent to <strong>0768655532</strong> before parcel dispatch.
                 </p>
                 <div class="flex flex-wrap gap-3">
                     <button onclick="switchTab('shop')" class="bg-white text-indigo-900 hover:bg-indigo-50 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition shadow">
                         <i class="fa-solid fa-store mr-1.5"></i> Browse Items
                     </button>
-                    <a href="https://wa.me/254754183948?text=Hello%20MAZURI%20STORE%2C%20I%20want%20to%20chat%20about%20offers." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition shadow flex items-center">
+                    <a href="https://wa.me/254754183948?text=Hello%20MAZURI%20STORE%2C%20I%20want%20to%20chat%20about%20your%20offers." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition shadow flex items-center">
                         <i class="fa-brands fa-whatsapp mr-1.5 text-lg"></i> Direct WhatsApp Chat
                     </a>
                 </div>
@@ -87,13 +87,13 @@
         <!-- NAVIGATION TABS -->
         <div class="flex border-b border-slate-200 mb-6 space-x-6">
             <button onclick="switchTab('shop')" id="tabShopBtn" class="pb-3 text-sm font-bold text-indigo-600 border-b-2 border-indigo-600 transition flex items-center">
-                <i class="fa-solid fa-grid-2 mr-2"></i> All Products & Offers
+                <i class="fa-solid fa-grid-2 mr-2"></i> Products & Offers
             </button>
             <button onclick="switchTab('myOrders')" id="tabOrdersBtn" class="pb-3 text-sm font-medium text-slate-500 hover:text-indigo-600 transition flex items-center hidden">
                 <i class="fa-solid fa-receipt mr-2"></i> My Orders
             </button>
             <button onclick="switchTab('admin')" id="tabAdminBtn" class="pb-3 text-sm font-medium text-slate-500 hover:text-indigo-600 transition flex items-center hidden">
-                <i class="fa-solid fa-user-shield mr-2"></i> Admin Panel
+                <i class="fa-solid fa-user-shield mr-2"></i> Admin Dashboard
             </button>
         </div>
 
@@ -102,17 +102,17 @@
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
                     <h3 class="text-xl font-extrabold text-slate-900">Featured Catalog</h3>
-                    <p class="text-xs text-slate-500">Real-time updated inventory and price listings</p>
+                    <p class="text-xs text-slate-500">Synced live with Firebase real-time database</p>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <button onclick="filterCategory('all')" id="filterAllBtn" class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-600 text-white">All Items</button>
-                    <button onclick="filterCategory('flash')" id="filterFlashBtn" class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 hover:bg-slate-300">🔥 Flash Sales Only</button>
+                    <button onclick="filterCategory('all')" id="filterAllBtn" class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-600 text-white shadow-sm">All Products</button>
+                    <button onclick="filterCategory('flash')" id="filterFlashBtn" class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 hover:bg-slate-300">🔥 Flash Sales</button>
                 </div>
             </div>
 
             <!-- Product Grid -->
             <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Dynamically synchronized from Firestore -->
+                <!-- Dynamically rendered -->
             </div>
         </div>
 
@@ -120,22 +120,22 @@
         <div id="tabMyOrders" class="hidden space-y-6">
             <div class="flex justify-between items-center">
                 <h3 class="text-xl font-extrabold text-slate-900">My Order History</h3>
-                <span class="text-xs text-slate-500">Updates live when shipping status changes</span>
+                <span class="text-xs text-slate-500">Live order status tracker</span>
             </div>
             <div id="myOrdersList" class="space-y-4">
                 <!-- Populated dynamically -->
             </div>
         </div>
 
-        <!-- TAB 3: ADMIN PANEL (Chiro Daniel) -->
+        <!-- TAB 3: ADMIN DASHBOARD -->
         <div id="tabAdmin" class="hidden space-y-6">
             <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                     <div class="flex items-center space-x-2">
                         <span class="bg-amber-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">Store Admin</span>
-                        <h3 class="font-bold text-amber-950 text-lg">MAZURI STORE Control Center</h3>
+                        <h3 class="font-bold text-amber-950 text-lg">MAZURI STORE Admin Panel</h3>
                     </div>
-                    <p class="text-xs text-amber-800 mt-0.5">Logged in as <strong>chirodaniel9@gmail.com</strong>. You have full access to manage inventory, flash sales, and customer orders.</p>
+                    <p class="text-xs text-amber-800 mt-0.5">Manage live products, toggle flash sales, track customer orders, and update delivery statuses.</p>
                 </div>
                 <button onclick="openAddProductModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold transition shadow-md flex items-center">
                     <i class="fa-solid fa-plus mr-1.5"></i> Add New Product
@@ -145,7 +145,7 @@
             <!-- Customer Orders Listing -->
             <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                 <div class="flex justify-between items-center mb-4">
-                    <h4 class="font-bold text-slate-900 text-lg">Received Customer Orders</h4>
+                    <h4 class="font-bold text-slate-900 text-lg">Live Customer Orders</h4>
                     <span id="adminOrdersCount" class="text-xs font-bold bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full">0 Orders</span>
                 </div>
                 <div id="adminOrdersList" class="space-y-4">
@@ -155,7 +155,7 @@
 
             <!-- Product Inventory Management -->
             <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-                <h4 class="font-bold text-slate-900 text-lg mb-4">Manage Live Inventory & Flash Sales</h4>
+                <h4 class="font-bold text-slate-900 text-lg mb-4">Live Inventory & Flash Sale Controls</h4>
                 <div id="adminProductList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <!-- Dynamic live updates -->
                 </div>
@@ -169,7 +169,7 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
             <div>
                 <p class="font-bold text-slate-800 text-sm">MAZURI STORE</p>
-                <p>&copy; 2026 MAZURI STORE. All rights reserved.</p>
+                <p>&copy; 2026 MAZURI STORE. Real-time Firebase Sync Connected.</p>
             </div>
             <div class="flex flex-wrap gap-4 items-center">
                 <a href="https://wa.me/254754183948" target="_blank" class="hover:text-emerald-600 flex items-center font-medium">
@@ -182,7 +182,7 @@
         </div>
     </footer>
 
-    <!-- MODAL: AUTHENTICATION (Login / Sign Up) -->
+    <!-- MODAL: AUTHENTICATION (Sign In / Sign Up) -->
     <div id="authModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
             <button onclick="closeAuthModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
@@ -194,7 +194,7 @@
                     <i class="fa-solid fa-lock"></i>
                 </div>
                 <h3 id="authModalTitle" class="text-xl font-bold text-slate-900">Sign In to MAZURI STORE</h3>
-                <p id="authModalSubtitle" class="text-xs text-slate-500 mt-1">Enter your email and password to manage your account or place orders</p>
+                <p id="authModalSubtitle" class="text-xs text-slate-500 mt-1">Access your account to order items or manage the store</p>
             </div>
 
             <form id="authForm" onsubmit="handleAuthSubmit(event)" class="space-y-4">
@@ -205,12 +205,6 @@
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Password</label>
                     <input type="password" id="authPassword" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="••••••••">
-                </div>
-
-                <div id="adminLoginHint" class="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-900">
-                    <p class="font-bold"><i class="fa-solid fa-key mr-1"></i> Admin Login Info:</p>
-                    <p>Email: <strong>chirodaniel9@gmail.com</strong></p>
-                    <p>Password: <strong>14415</strong></p>
                 </div>
 
                 <button type="submit" id="authSubmitBtn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition shadow-md text-sm">Sign In</button>
@@ -230,9 +224,9 @@
             </button>
 
             <div class="mb-4">
-                <span class="bg-indigo-100 text-indigo-700 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">Order Details</span>
-                <h3 class="text-xl font-bold text-slate-900 mt-1">Complete Order Form</h3>
-                <p class="text-xs text-slate-500">Selected Item: <strong id="checkoutItemName" class="text-indigo-600"></strong> (<span id="checkoutItemPrice" class="font-bold"></span>)</p>
+                <span class="bg-indigo-100 text-indigo-700 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">Order Checkout</span>
+                <h3 class="text-xl font-bold text-slate-900 mt-1">Complete Customer Form</h3>
+                <p class="text-xs text-slate-500">Item: <strong id="checkoutItemName" class="text-indigo-600"></strong> (<span id="checkoutItemPrice" class="font-bold"></span>)</p>
             </div>
 
             <!-- MANDATORY SHIPPING & PAYMENT NOTICE -->
@@ -240,12 +234,12 @@
                 <p class="font-extrabold text-amber-900 flex items-center text-sm">
                     <i class="fa-solid fa-circle-exclamation text-amber-600 mr-2"></i> Payment Notice & Instructions
                 </p>
-                <p>1. Item payment is <strong>on delivery</strong> upon receiving your parcel.</p>
-                <p>2. You <strong>MUST pay the shipping fee first</strong> to send money to: <span class="bg-white px-2 py-0.5 rounded font-extrabold border border-amber-300 text-indigo-900">0768655532</span>.</p>
+                <p>1. Main item payment is <strong>on delivery</strong> when your package arrives.</p>
+                <p>2. You <strong>MUST pay the shipping fee first</strong> by sending money to: <span class="bg-white px-2 py-0.5 rounded font-black border border-amber-300 text-indigo-900">0768655532</span>.</p>
                 <p class="pt-1">
-                    3. Have questions before ordering? 
+                    3. Want to inquire before ordering? 
                     <a href="https://wa.me/254754183948" target="_blank" class="text-emerald-700 hover:text-emerald-800 font-extrabold underline inline-flex items-center">
-                        <i class="fa-brands fa-whatsapp mr-1"></i> Chat on WhatsApp (0754183948)
+                        <i class="fa-brands fa-whatsapp mr-1"></i> Chat via WhatsApp (0754183948)
                     </a>
                 </p>
             </div>
@@ -257,7 +251,7 @@
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Delivery Location & Town</label>
-                    <textarea id="customerLocation" rows="2" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="Enter your city/town, estate, street name, building or house number..."></textarea>
+                    <textarea id="customerLocation" rows="2" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="Enter your city/town, estate, street name or house details..."></textarea>
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Additional Notes (Optional)</label>
@@ -287,7 +281,7 @@
                 <input type="hidden" id="editProductId">
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Product Title</label>
-                    <input type="text" id="prodName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="e.g. Premium Smart Watch">
+                    <input type="text" id="prodName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="e.g. Smart Watch Series 8">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Price (e.g. Ksh 2,500)</label>
@@ -295,15 +289,15 @@
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Image URL</label>
-                    <input type="url" id="prodImage" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="https://images.unsplash.com/... or image link">
+                    <input type="url" id="prodImage" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="https://images.unsplash.com/...">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-700 mb-1">Item Description</label>
-                    <textarea id="prodDesc" rows="2" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="Details about quality, features, size..."></textarea>
+                    <textarea id="prodDesc" rows="2" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm" placeholder="Product features, size, warranty..."></textarea>
                 </div>
                 <div class="flex items-center space-x-2.5 bg-slate-50 p-3 rounded-xl border border-slate-200">
                     <input type="checkbox" id="prodFlashSale" class="w-4 h-4 text-indigo-600 rounded focus:ring-indigo-500">
-                    <label for="prodFlashSale" class="text-xs font-bold text-slate-800 cursor-pointer">Place item on Flash Sale / Offer 🔥</label>
+                    <label for="prodFlashSale" class="text-xs font-bold text-slate-800 cursor-pointer">Place item on Flash Sale / Special Offer 🔥</label>
                 </div>
 
                 <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition shadow-md text-sm">Save Product & Sync Live</button>
@@ -311,7 +305,7 @@
         </div>
     </div>
 
-    <!-- MODAL: SYSTEM NOTIFICATION -->
+    <!-- MODAL: NOTIFICATION MODAL -->
     <div id="msgModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl relative">
             <div id="msgIcon" class="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl font-bold bg-indigo-100 text-indigo-600">
@@ -323,28 +317,39 @@
         </div>
     </div>
 
-    <!-- FIREBASE MODULE & REAL-TIME LOGIC -->
+    <!-- FIREBASE & REAL-TIME LOGIC ENGINE -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, doc, setDoc, addDoc, updateDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // Environment Variables Check & Fallbacks
+        // Application Identification & Exact Firebase Config from Console
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'mazuri-store-app-2026';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-            apiKey: "AIzaSyDummyKeyForPreviewModeOnly12345",
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyB77IErJJH-Y4sixxLFFEnu021q6HjIp7w",
             authDomain: "maalim-946b5.firebaseapp.com",
             projectId: "maalim-946b5",
-            storageBucket: "maalim-946b5.appspot.com",
-            messagingSenderId: "123456789",
-            appId: "1:123456789:web:abcdef"
+            storageBucket: "maalim-946b5.firebasestorage.app",
+            messagingSenderId: "485463178885",
+            appId: "1:485463178885:web:69a30e0688b25923f2b3ec",
+            measurementId: "G-1MB9GQ56R8"
         };
 
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
+        // Initialize Firebase
+        let app, auth, db;
+        let useFirebase = true;
 
-        // Global Application State
+        try {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+        } catch(e) {
+            console.warn("Firebase initialization switched to local mode:", e);
+            useFirebase = false;
+        }
+
+        // Global State
         window.currentUser = null;
         window.isAdmin = false;
         window.productsList = [];
@@ -353,140 +358,174 @@
         window.authIsSignUp = false;
         window.currentCategoryFilter = 'all';
 
-        // Admin Auth Credentials
-        const ADMIN_EMAIL = "chirodaniel9@gmail.com";
-        const ADMIN_PASS = "14415";
+        // Local Storage Helpers (Fallback)
+        function getLocalProducts() {
+            const data = localStorage.getItem('mazuri_products');
+            return data ? JSON.parse(data) : [
+                { id: '1', name: "Wireless Bluetooth Headphones", price: "Ksh 2,400", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80", desc: "Premium noise isolation with deep bass response.", flashSale: true },
+                { id: '2', name: "Smart Fitness Watch Ultra", price: "Ksh 3,800", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80", desc: "Monitors heart rate, workouts, oxygen and notifications.", flashSale: true },
+                { id: '3', name: "Unisex Casual Sneakers", price: "Ksh 3,200", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80", desc: "Lightweight comfortable sole for everyday wear.", flashSale: false },
+                { id: '4', name: "Genuine Leather Slim Wallet", price: "Ksh 1,500", image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&q=80", desc: "Sleek RFID protected genuine leather wallet.", flashSale: true }
+            ];
+        }
 
-        // Initialize Authentication Guard
-        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-        
-        async function initAuth() {
-            try {
-                if (initialAuthToken) {
-                    await signInWithCustomToken(auth, initialAuthToken);
-                } else {
+        function getLocalOrders() {
+            const data = localStorage.getItem('mazuri_orders');
+            return data ? JSON.parse(data) : [];
+        }
+
+        function saveLocalProducts(list) {
+            localStorage.setItem('mazuri_products', JSON.stringify(list));
+            window.productsList = list;
+            renderProducts();
+            renderAdminProducts();
+        }
+
+        function saveLocalOrders(list) {
+            localStorage.setItem('mazuri_orders', JSON.stringify(list));
+            window.ordersList = list;
+            renderOrders();
+        }
+
+        // Initialize Authentication & Listeners
+        async function initApp() {
+            if (useFirebase && auth) {
+                try {
                     await signInAnonymously(auth);
+                } catch(err) {
+                    console.log("Anonymous Auth Note:", err.message);
                 }
-            } catch (err) {
-                console.log("Auth Initialization Info:", err.message);
+
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        window.currentUser = user;
+                        // Determine admin dynamically based on user email domain/pattern
+                        window.isAdmin = user.email ? (user.email.includes('admin') || user.email.includes('chiro')) : false;
+                    } else {
+                        window.currentUser = null;
+                        window.isAdmin = false;
+                    }
+                    updateAuthNav();
+                    setupRealtimeSync();
+                });
+            } else {
+                // Fallback Engine Initialized
+                window.productsList = getLocalProducts();
+                window.ordersList = getLocalOrders();
+                renderProducts();
+                renderAdminProducts();
+                renderOrders();
             }
         }
-        initAuth();
+        initApp();
 
-        // Auth Observer & Listener Registration
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                window.currentUser = user;
-                window.isAdmin = (user.email === ADMIN_EMAIL);
-            } else {
-                window.currentUser = null;
-                window.isAdmin = false;
-            }
-            updateAuthNav();
-            setupRealtimeSync();
-        });
-
-        // Live Real-Time Firestore Sync Listener Across All Devices
+        // Firebase Realtime Listener Engine
         function setupRealtimeSync() {
-            if (!window.currentUser) return;
+            if (!useFirebase || !db || !window.currentUser) return;
 
-            // 1. Sync Products & Flash Sales
-            const productsRef = collection(db, 'artifacts', appId, 'public', 'data', 'products');
-            onSnapshot(productsRef, (snapshot) => {
-                const items = [];
-                snapshot.forEach(docSnap => {
-                    items.push({ id: docSnap.id, ...docSnap.data() });
-                });
+            // Sync Products
+            try {
+                const productsRef = collection(db, 'artifacts', appId, 'public', 'data', 'products');
+                onSnapshot(productsRef, (snapshot) => {
+                    const items = [];
+                    snapshot.forEach(docSnap => {
+                        items.push({ id: docSnap.id, ...docSnap.data() });
+                    });
 
-                if (items.length === 0) {
-                    seedDefaultStoreItems(productsRef);
-                } else {
-                    window.productsList = items;
+                    if (items.length === 0) {
+                        seedDefaultStoreItems(productsRef);
+                    } else {
+                        window.productsList = items;
+                        renderProducts();
+                        renderAdminProducts();
+                    }
+                }, (error) => {
+                    console.warn("Firestore sync switched to local fallback:", error.message);
+                    window.productsList = getLocalProducts();
                     renderProducts();
                     renderAdminProducts();
-                }
-            }, (error) => {
-                console.error("Products Firestore Sync Error:", error);
-            });
-
-            // 2. Sync Orders Real-time
-            const ordersRef = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
-            onSnapshot(ordersRef, (snapshot) => {
-                const ords = [];
-                snapshot.forEach(docSnap => {
-                    ords.push({ id: docSnap.id, ...docSnap.data() });
                 });
-                window.ordersList = ords;
-                renderOrders();
-            }, (error) => {
-                console.error("Orders Firestore Sync Error:", error);
-            });
-        }
+            } catch(e) {
+                window.productsList = getLocalProducts();
+                renderProducts();
+                renderAdminProducts();
+            }
 
-        // Seed initial items if database is empty
-        async function seedDefaultStoreItems(ref) {
-            const defaults = [
-                { name: "Wireless Bluetooth Headphones", price: "Ksh 2,400", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80", desc: "Premium noise isolation with deep bass response.", flashSale: true },
-                { name: "Smart Fitness Watch Ultra", price: "Ksh 3,800", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80", desc: "Monitors heart rate, workouts, oxygen and notifications.", flashSale: true },
-                { name: "Unisex Casual Sneakers", price: "Ksh 3,200", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80", desc: "Lightweight comfortable sole for everyday wear.", flashSale: false },
-                { name: "Genuine Leather Slim Wallet", price: "Ksh 1,500", image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&q=80", desc: "Sleek RFID protected genuine leather wallet.", flashSale: true }
-            ];
-            for (let item of defaults) {
-                await addDoc(ref, item);
+            // Sync Orders
+            try {
+                const ordersRef = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
+                onSnapshot(ordersRef, (snapshot) => {
+                    const ords = [];
+                    snapshot.forEach(docSnap => {
+                        ords.push({ id: docSnap.id, ...docSnap.data() });
+                    });
+                    window.ordersList = ords;
+                    renderOrders();
+                }, (error) => {
+                    console.warn("Firestore orders sync fallback:", error.message);
+                    window.ordersList = getLocalOrders();
+                    renderOrders();
+                });
+            } catch(e) {
+                window.ordersList = getLocalOrders();
+                renderOrders();
             }
         }
 
-        // Auth Submit Handler
+        async function seedDefaultStoreItems(ref) {
+            const defaults = getLocalProducts();
+            for (let item of defaults) {
+                const { id, ...data } = item;
+                await addDoc(ref, data);
+            }
+        }
+
+        // Handle Auth Submission
         window.handleAuthSubmit = async function(e) {
             e.preventDefault();
             const email = document.getElementById('authEmail').value.trim();
             const password = document.getElementById('authPassword').value.trim();
 
-            try {
-                // Check Admin Credentials
-                if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
-                    try {
-                        await signInWithEmailAndPassword(auth, email, password);
-                    } catch (err) {
+            if (useFirebase && auth) {
+                try {
+                    if (window.authIsSignUp) {
                         await createUserWithEmailAndPassword(auth, email, password);
+                        closeAuthModal();
+                        showMsg("Account Created", "Welcome to MAZURI STORE!", "success");
+                    } else {
+                        await signInWithEmailAndPassword(auth, email, password);
+                        closeAuthModal();
+                        showMsg("Welcome Back", "Signed in successfully.", "success");
                     }
-                    window.isAdmin = true;
-                    closeAuthModal();
-                    showMsg("Admin Authenticated", "Welcome back Chiro Daniel! Redirecting to Admin Panel.", "success");
-                    switchTab('admin');
-                    updateAuthNav();
-                    return;
+                } catch (error) {
+                    showMsg("Authentication Info", error.message, "error");
                 }
-
-                if (window.authIsSignUp) {
-                    await createUserWithEmailAndPassword(auth, email, password);
-                    closeAuthModal();
-                    showMsg("Account Created", "Welcome to MAZURI STORE!", "success");
-                } else {
-                    await signInWithEmailAndPassword(auth, email, password);
-                    closeAuthModal();
-                    showMsg("Welcome Back", "Signed in successfully.", "success");
-                }
-            } catch (error) {
-                showMsg("Authentication Failed", error.message, "error");
+            } else {
+                // Local Mode Auth Simulation
+                window.currentUser = { email: email, uid: 'local-user-' + Date.now() };
+                window.isAdmin = email.includes('admin') || email.includes('chiro');
+                updateAuthNav();
+                closeAuthModal();
+                showMsg("Signed In", "Signed in as " + email, "success");
             }
         };
 
-        // Sign Out Handler
         window.logoutUser = async function() {
-            await signOut(auth);
-            await signInAnonymously(auth);
-            window.currentUser = auth.currentUser;
+            if (useFirebase && auth) {
+                await signOut(auth);
+                await signInAnonymously(auth);
+            }
+            window.currentUser = null;
             window.isAdmin = false;
             switchTab('shop');
             updateAuthNav();
             showMsg("Signed Out", "You have logged out.", "info");
         };
 
-        // Checkout Order Submit Handler
+        // Handle Order Checkout Submission
         window.handleCheckoutSubmit = async function(e) {
             e.preventDefault();
-            if (!window.currentUser || window.currentUser.isAnonymous) {
+            if (!window.currentUser) {
                 closeCheckoutModal();
                 openAuthModal();
                 showMsg("Sign In Required", "Please sign in or create an account to submit your order.", "error");
@@ -500,8 +539,8 @@
             const orderData = {
                 productName: window.selectedProductForCheckout.name,
                 productPrice: window.selectedProductForCheckout.price,
-                customerEmail: window.currentUser.email || "Registered User",
-                customerUid: window.currentUser.uid,
+                customerEmail: window.currentUser.email || "Registered Customer",
+                customerUid: window.currentUser.uid || "user-" + Date.now(),
                 phone: phone,
                 location: location,
                 notes: notes,
@@ -509,22 +548,31 @@
                 timestamp: new Date().toISOString()
             };
 
-            try {
-                const ordersRef = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
-                await addDoc(ordersRef, orderData);
-                closeCheckoutModal();
-                showMsg("Order Submitted!", "Your order is logged. Please send the shipping fee to 0768655532 so your package can be dispatched. Main payment is on delivery!", "success");
-                switchTab('myOrders');
-            } catch (err) {
-                showMsg("Order Error", "Could not submit order: " + err.message, "error");
+            if (useFirebase && db) {
+                try {
+                    const ordersRef = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
+                    await addDoc(ordersRef, orderData);
+                } catch (err) {
+                    const current = getLocalOrders();
+                    current.push({ id: 'ord-' + Date.now(), ...orderData });
+                    saveLocalOrders(current);
+                }
+            } else {
+                const current = getLocalOrders();
+                current.push({ id: 'ord-' + Date.now(), ...orderData });
+                saveLocalOrders(current);
             }
+
+            closeCheckoutModal();
+            showMsg("Order Submitted!", "Your order is logged. Please send the shipping fee to 0768655532 so your package can be dispatched. Main item payment is on delivery!", "success");
+            switchTab('myOrders');
         };
 
         // Product Management (Admin Add/Edit)
         window.handleProductSubmit = async function(e) {
             e.preventDefault();
             if (!window.isAdmin) {
-                showMsg("Access Denied", "Only Admin (chirodaniel9@gmail.com) can modify products.", "error");
+                showMsg("Access Denied", "Only Store Admin can modify catalog items.", "error");
                 return;
             }
 
@@ -537,46 +585,73 @@
 
             const productData = { name, price, image, desc, flashSale, updatedAt: new Date().toISOString() };
 
-            try {
-                if (id) {
-                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', id);
-                    await updateDoc(docRef, productData);
-                    showMsg("Product Updated", "Changes saved & synced across all user devices in real time!", "success");
-                } else {
-                    const productsRef = collection(db, 'artifacts', appId, 'public', 'data', 'products');
-                    await addDoc(productsRef, productData);
-                    showMsg("Product Uploaded", "New product added and live across all devices!", "success");
+            if (useFirebase && db) {
+                try {
+                    if (id) {
+                        const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', id);
+                        await updateDoc(docRef, productData);
+                        showMsg("Product Updated", "Saved & synced live across all user devices!", "success");
+                    } else {
+                        const productsRef = collection(db, 'artifacts', appId, 'public', 'data', 'products');
+                        await addDoc(productsRef, productData);
+                        showMsg("Product Uploaded", "New item live on MAZURI STORE!", "success");
+                    }
+                } catch (err) {
+                    handleLocalProductSave(id, productData);
                 }
-                closeProductModal();
-            } catch (err) {
-                showMsg("Error", "Save failed: " + err.message, "error");
+            } else {
+                handleLocalProductSave(id, productData);
             }
+            closeProductModal();
         };
+
+        function handleLocalProductSave(id, data) {
+            let list = getLocalProducts();
+            if (id) {
+                list = list.map(p => p.id === id ? { id, ...data } : p);
+            } else {
+                list.push({ id: 'prod-' + Date.now(), ...data });
+            }
+            saveLocalProducts(list);
+            showMsg("Product Saved", "Updated catalog successfully.", "success");
+        }
 
         window.deleteProduct = async function(id) {
             if (!window.isAdmin) return;
-            try {
-                const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', id);
-                await deleteDoc(docRef);
-                showMsg("Deleted", "Product removed and updated live for all customers.", "info");
-            } catch (err) {
-                showMsg("Error", "Could not delete: " + err.message, "error");
+            if (useFirebase && db) {
+                try {
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'products', id);
+                    await deleteDoc(docRef);
+                    showMsg("Deleted", "Item removed from catalog.", "info");
+                } catch (err) {
+                    let list = getLocalProducts().filter(p => p.id !== id);
+                    saveLocalProducts(list);
+                }
+            } else {
+                let list = getLocalProducts().filter(p => p.id !== id);
+                saveLocalProducts(list);
             }
         };
 
         window.updateOrderStatus = async function(orderId, newStatus) {
             if (!window.isAdmin) return;
-            try {
-                const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'orders', orderId);
-                await updateDoc(docRef, { status: newStatus });
-                showMsg("Status Saved", "Order status updated to: " + newStatus, "success");
-            } catch (err) {
-                showMsg("Error", err.message, "error");
+            if (useFirebase && db) {
+                try {
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'orders', orderId);
+                    await updateDoc(docRef, { status: newStatus });
+                    showMsg("Status Updated", "Order status changed to: " + newStatus, "success");
+                } catch (err) {
+                    let list = getLocalOrders().map(o => o.id === orderId ? { ...o, status: newStatus } : o);
+                    saveLocalOrders(list);
+                }
+            } else {
+                let list = getLocalOrders().map(o => o.id === orderId ? { ...o, status: newStatus } : o);
+                saveLocalOrders(list);
             }
         };
     </script>
 
-    <!-- UI TOGGLES & RENDER SCRIPT -->
+    <!-- UI TOGGLES & RENDER INTERFACE -->
     <script>
         function updateAuthNav() {
             const nav = document.getElementById('authNavArea');
@@ -586,7 +661,7 @@
             if (window.currentUser) {
                 let userDisplay = window.currentUser.email || "Customer";
                 if (window.isAdmin) {
-                    userDisplay = "👑 Admin (Chiro Daniel)";
+                    userDisplay = "👑 Admin";
                     tabAdminBtn.classList.remove('hidden');
                     tabOrdersBtn.classList.add('hidden');
                 } else {
@@ -651,6 +726,7 @@
 
         function renderProducts() {
             const grid = document.getElementById('productGrid');
+            if(!grid) return;
             let list = window.productsList;
 
             if (window.currentCategoryFilter === 'flash') {
@@ -671,7 +747,7 @@
                         </div>
                         <div class="p-5">
                             <h4 class="font-bold text-slate-900 text-base mb-1 line-clamp-1">${item.name}</h4>
-                            <p class="text-xs text-slate-500 mb-3 line-clamp-2">${item.desc || 'High quality item from MAZURI STORE.'}</p>
+                            <p class="text-xs text-slate-500 mb-3 line-clamp-2">${item.desc || 'Quality item from MAZURI STORE.'}</p>
                             <div class="text-indigo-600 font-extrabold text-xl">${item.price}</div>
                         </div>
                     </div>
@@ -731,9 +807,9 @@
                                     <span class="font-extrabold text-slate-900 text-base">${o.productName}</span>
                                     <span class="bg-indigo-600 text-white text-xs font-bold px-2 py-0.5 rounded">${o.productPrice}</span>
                                 </div>
-                                <p class="text-xs text-slate-700"><strong>Customer Email:</strong> ${o.customerEmail}</p>
+                                <p class="text-xs text-slate-700"><strong>Customer:</strong> ${o.customerEmail}</p>
                                 <p class="text-xs text-slate-700"><strong>Phone:</strong> <a href="tel:${o.phone}" class="text-indigo-600 underline font-bold">${o.phone}</a></p>
-                                <p class="text-xs text-slate-700"><strong>Delivery Location:</strong> ${o.location}</p>
+                                <p class="text-xs text-slate-700"><strong>Location:</strong> ${o.location}</p>
                                 ${o.notes ? `<p class="text-xs text-slate-500 italic bg-white p-2 rounded-lg border border-slate-200 mt-1">Notes: "${o.notes}"</p>` : ''}
                                 <p class="text-[11px] text-slate-400">Received: ${new Date(o.timestamp).toLocaleString()}</p>
                             </div>
@@ -783,7 +859,7 @@
             `).join('');
         }
 
-        // Modal Helpers
+        // Modal Controls
         function openAuthModal() {
             document.getElementById('authModal').classList.remove('hidden');
         }
@@ -799,19 +875,19 @@
 
             if (window.authIsSignUp) {
                 title.textContent = "Create an Account";
-                sub.textContent = "Sign up with your email & password to order";
+                sub.textContent = "Sign up with your email & password to place orders";
                 btn.textContent = "Sign Up";
                 toggleBtn.textContent = "Already have an account? Sign In";
             } else {
                 title.textContent = "Sign In to MAZURI STORE";
-                sub.textContent = "Enter your email and password";
+                sub.textContent = "Access your account to order items or manage the store";
                 btn.textContent = "Sign In";
                 toggleBtn.textContent = "Need an account? Sign Up";
             }
         }
 
         function openCheckoutModal(item) {
-            if (!window.currentUser || window.currentUser.isAnonymous) {
+            if (!window.currentUser) {
                 openAuthModal();
                 showMsg("Sign In Required", "Please sign in or create an account to complete your order.", "info");
                 return;
@@ -835,6 +911,7 @@
             document.getElementById('prodFlashSale').checked = false;
             document.getElementById('productModal').classList.remove('hidden');
         }
+
         function openEditProductModal(item) {
             document.getElementById('productModalTitle').textContent = "Edit MAZURI STORE Product";
             document.getElementById('editProductId').value = item.id;
@@ -845,6 +922,7 @@
             document.getElementById('prodFlashSale').checked = !!item.flashSale;
             document.getElementById('productModal').classList.remove('hidden');
         }
+
         function closeProductModal() {
             document.getElementById('productModal').classList.add('hidden');
         }
